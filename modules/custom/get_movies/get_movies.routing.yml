@@ -1,0 +1,7 @@
+get_movies.content:
+  path: '/all_movies'
+  defaults:
+    _controller: '\Drupal\get_movies\Controller\GetMoviesController::content'
+    _title: "All Movies"
+  requirements:
+    _permission: 'access content'

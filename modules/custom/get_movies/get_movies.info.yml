@@ -1,0 +1,5 @@
+name: get_movies
+type: module
+description: "Practice module for getting movies from an external API"
+package: custom
+core: 8.x
