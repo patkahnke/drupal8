@@ -23,10 +23,13 @@ use Symfony\Component\HttpFoundation\Response;
             curl_close($ch);
 
             $json = json_decode($response, true);
+            $dataArray = $json[data];
 
-                echo '<h2>';
-                echo $json[data][0][attributes][title];
-                echo '</h2>';
+            for ($i = 0; $i < count($dataArray); $i++) {
+
+                print $dataArray[$i][attributes][title];
+                print '</br>';
+            }
 
             return new Response();
 

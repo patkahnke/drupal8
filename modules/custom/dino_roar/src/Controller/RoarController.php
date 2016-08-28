@@ -28,7 +28,10 @@ class RoarController extends ControllerBase
         $this->loggerFactoryService->get('default')
             ->debug($roar);
 
-        return new Response($roar);
+        //return new Response($roar);
+        return [
+            '#title' => $roar
+        ];
     }
 
     public static function create(ContainerInterface $container)
